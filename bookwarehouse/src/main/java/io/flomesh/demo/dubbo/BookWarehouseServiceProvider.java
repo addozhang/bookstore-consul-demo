@@ -32,6 +32,7 @@ public class BookWarehouseServiceProvider implements BookWarehouseService {
 
     @Override
     public Book getBook(String id) {
-        return null;
+        log.info("getBook() is called with id: " + id);
+        return bookService.getBook(id);
     }
 }

@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.filter.CommonsRequestLoggingFilter;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 @SpringBootApplication
 public class BookWarehouseApplication {
@@ -28,9 +28,9 @@ public class BookWarehouseApplication {
 
     @Bean
     BookRepository initStocks(BookRepository repository) {
-        repository.add(new Book("1", 0 ,"Pipy 入门", "Flomesh","9787517054221", LocalDate.of(2023,1,1)));
-        repository.add(new Book("2", 0 ,"Pipy 从入门到放弃", "Flomesh","9787517054222", LocalDate.of(2023,1,2)));
-        repository.add(new Book("3", 0 ,"FSM 入门", "Flomesh","9787517054223", LocalDate.of(2023,1,3)));
+        repository.add(new Book("1", 0 ,"Pipy 入门", "Flomesh","9787517054221", new Date()));
+        repository.add(new Book("2", 0 ,"Pipy 从入门到放弃", "Flomesh","9787517054222", new Date()));
+        repository.add(new Book("3", 0 ,"FSM 入门", "Flomesh","9787517054223", new Date()));
         return repository;
     }
 

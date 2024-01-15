@@ -11,7 +11,8 @@ dubbo:
   scan:
     base-packages: io.flomesh.demo.dubbo
   protocol:
-    name: hessian
+    name: dubbo
+    serialization: hessian2
   config:
     multiple: false
 
