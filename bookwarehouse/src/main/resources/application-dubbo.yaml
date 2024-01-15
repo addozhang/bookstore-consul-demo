@@ -1,10 +1,10 @@
 service:
   bookwarehouse:
     version: v1
-    url: dubbo://${VM_HOST:${VM_HOST:192.168.11.162}}:20880/io.flomesh.demo.api.BookWarehouseService?serialization=hessian2
+    url: dubbo://${WAREHOUSE_ADDRESS:192.168.11.162:20880}/io.flomesh.demo.api.BookWarehouseService?serialization=hessian2
   bookstore:
     version: v1
-    url: dubbo://${VM_HOST:192.168.11.162}:20881/io.flomesh.demo.api.BookstoreService?serialization=hessian2
+    url: dubbo://${STORE_ADDRESS:192.168.11.162:20881}/io.flomesh.demo.api.BookstoreService?serialization=hessian2
 
 dubbo:
   enabled: true

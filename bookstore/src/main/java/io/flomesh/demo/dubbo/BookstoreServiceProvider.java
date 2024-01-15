@@ -20,7 +20,7 @@ public class BookstoreServiceProvider implements BookstoreService {
     @Override
     public boolean sellBook() {
         log.info("sellBook() is called");
-        return bookWarehouseService.restockBooks(Instants.DEFAULT_ID, 2);
+        return bookWarehouseService.restockBooks(Instants.DEFAULT_ID, 1);
     }
 
     @Override
