@@ -6,6 +6,10 @@ dubbo:
   enabled: true
   scan:
     base-packages: io.flomesh.demo.dubbo
+  protocol:
+    name: hessian
+  config:
+    multiple: false
 
 spring:
   main:
