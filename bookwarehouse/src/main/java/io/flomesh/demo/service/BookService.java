@@ -23,4 +23,8 @@ public class BookService {
     public List<Book> getBooks() {
         return bookRepository.getBooks();
     }
+
+    public Book getBook(String id) {
+        return bookRepository.getBook(id);
+    }
 }

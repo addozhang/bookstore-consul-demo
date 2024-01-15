@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Profile("dubbo")
 public class BuyBookDubboTask {
 
-    @Reference(version = "${service.version.bookstore}")
+    @Reference(version = "${service.bookstore.version}", url="${service.bookstore.url}")
     private BookstoreService bookstoreService;
 
     @Scheduled(fixedRate = 1000)

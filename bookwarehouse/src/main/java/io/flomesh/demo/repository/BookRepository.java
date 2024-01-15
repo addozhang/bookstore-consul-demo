@@ -27,4 +27,11 @@ public class BookRepository {
     public List<Book> getBooks() {
         return books;
     }
+
+    public Book getBook(String id) {
+        return books.stream()
+                .filter(b -> b.getId().equals(id))
+                .findFirst()
+                .orElse(null);
+    }
 }

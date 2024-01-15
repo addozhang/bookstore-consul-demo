@@ -1,13 +1,18 @@
 service:
-  version:
-    bookwarehouse: v1
-    bookstore: v1
+  bookwarehouse:
+    version: v1
+    url: dubbo://${VM_HOST:192.168.11.162}:20880/io.flomesh.demo.api.BookWarehouseService?serialization=hessian2
+  bookstore:
+    version: v1
+    url: dubbo://${VM_HOST:192.168.11.162}:20881/io.flomesh.demo.api.BookstoreService?serialization=hessian2
+
 dubbo:
   enabled: true
   scan:
     base-packages: io.flomesh.demo.dubbo
   protocol:
-    name: hessian
+    name: dubbo
+    serialization: hessian2
   config:
     multiple: false
 
