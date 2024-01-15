@@ -71,7 +71,7 @@ EOF
 }
 
 # Remove existing manifests
-rm -f manifests/*/book*.yaml
+#rm -f manifests/*/book*.yaml
 
 # For each module, generate the yaml
 for module in bookwarehouse bookstore bookbuyer bookthief curl httpbin gateway; do

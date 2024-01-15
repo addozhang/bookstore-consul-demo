@@ -51,7 +51,7 @@ EOF
 }
 
 # Remove existing manifests
-rm -f manifests/*/book*.yaml
+rm -f manifests/dubbo/*.yaml
 
 # For each module, generate the yaml
 for module in bookwarehouse bookstore bookbuyer bookthief; do
